@@ -1,0 +1,18 @@
+$input-element: ""
+$input-prefix: "input"
+
+@mixin input($name, $inactivecolors, $activecolors)
+  %#{$input-prefix}-#{$name}
+    @extend #{$input-element}.#{$input-prefix}
+
+    @each $color in $inactivecolors
+      @include color(nth($color, 1), nth($color, 2))
+
+    &:focus
+      @each $color in $activecolors
+        @include color(nth($color, 1), nth($color, 2))
+
+  @each $size in $sizes
+    #{$input-element}.#{$input-prefix}-#{$name}-#{$size}
+      @extend %#{$input-prefix}-#{$name}
+      @extend %size-#{$size}

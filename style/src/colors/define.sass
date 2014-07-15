@@ -1,0 +1,10 @@
+$colors: "primary" #45a4fc, "darkest gray" #494a4f, "dark gray" #7f8094, "gray" #abadc2, "light gray" #dadde6, "lightest gray" #f6f7ff, "hover" #79bdfc, "white" #fff, "black" #000, "clear" rgba(0,0,0,0)
+
+@mixin color($property, $id)
+  @if type-of($id) == "number"
+    #{$property}: nth(nth($colors, $id), 2)
+
+  @if type-of($id) == "string"
+    @each $color in $colors
+      @if $id == nth($color, 1)
+        #{$property}: nth($color, 2)
