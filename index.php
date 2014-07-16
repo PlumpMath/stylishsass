@@ -130,5 +130,66 @@ function view($view, $bin)
         </script>
       </li>
     </ul>
+    <h2 override-style="none">Icons</h2>
+    <ul class="style-bin">
+      <li class="style-item">
+        <h3 override-style="none">call</h3>
+        <i class="icon-call"></i>
+        <h3 override-style="none">code</h3>
+        <i class="icon-code"></i>
+        <h3 override-style="none">delete</h3>
+        <i class="icon-delete"></i>
+        <h3 override-style="none">down-arrow</h3>
+        <i class="icon-down-arrow"></i>
+        <h3 override-style="none">edit</h3>
+        <i class="icon-edit"></i>
+        <h3 override-style="none">facebook</h3>
+        <i class="icon-facebook"></i>
+        <h3 override-style="none">flashlight</h3>
+        <i class="icon-flashlight"></i>
+        <h3 override-style="none">google-plus</h3>
+        <i class="icon-google-plus"></i>
+        <h3 override-style="none">heart</h3>
+        <i class="icon-heart"></i>
+        <h3 override-style="none">instagram</h3>
+        <i class="icon-instagram"></i>
+        <h3 override-style="none">location</h3>
+        <i class="icon-location"></i>
+        <h3 override-style="none">mail</h3>
+        <i class="icon-mail"></i>
+        <h3 override-style="none">media</h3>
+        <i class="icon-media"></i>
+        <h3 override-style="none">menu</h3>
+        <i class="icon-menu"></i>
+        <h3 override-style="none">mobile</h3>
+        <i class="icon-mobile"></i>
+        <h3 override-style="none">people</h3>
+        <i class="icon-people"></i>
+        <h3 override-style="none">photo</h3>
+        <i class="icon-photo"></i>
+        <h3 override-style="none">pinterest</h3>
+        <i class="icon-pinterest"></i>
+        <h3 override-style="none">reload</h3>
+        <i class="icon-reload"></i>
+        <h3 override-style="none">rss</h3>
+        <i class="icon-rss"></i>
+        <h3 override-style="none">search</h3>
+        <i class="icon-search"></i>
+        <h3 override-style="none">share</h3>
+        <i class="icon-share"></i>
+        <h3 override-style="none">twitter</h3>
+        <i class="icon-twitter"></i>
+        <h3 override-style="none">video</h3>
+        <i class="icon-video"></i>
+        <h3 override-style="none">view</h3>
+        <i class="icon-view"></i>
+        <h3 override-style="none">x</h3>
+        <i class="icon-x"></i>
+        <h3 override-style="none">yield</h3>
+        <i class="icon-yield"></i>
+        <h3 override-style="none">youvisit</h3>
+        <i class="icon-youvisit"></i>
+      </li>
+    </ul>
   </body>
 </html>
