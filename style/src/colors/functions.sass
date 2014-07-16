@@ -8,3 +8,6 @@
   $rgb: map-get($colors, $name)
   $color: unquote("rgba(#{$rgb}, #{$alpha})")
   @return $color
+
+@function clear()
+  @return rgba(0,0,0,0)

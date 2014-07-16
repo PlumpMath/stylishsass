@@ -72,6 +72,12 @@ function view($view, $bin)
         </div>
       </li>
     </ul>
+    <h2>Tabs</h2>
+    <ul class="style-bin">
+      <li class="style-item">
+        
+      </li>
+    </ul>
     <h2 override-style="none">Inputs</h2>
     <ul class="style-bin">
       <li class="style-item">
@@ -106,7 +112,7 @@ function view($view, $bin)
         </script>
       </li>
       <li class="style-item">
-        <h3 override-style="none">Input Check Box</h3>
+        <h3 override-style="none">Input Radio</h3>
         <div class="input-radio checked">
           <input class="hidden" type="radio" name="radio-1"/>
         </div>
