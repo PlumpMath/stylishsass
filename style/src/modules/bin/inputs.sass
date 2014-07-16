@@ -1,0 +1,28 @@
+
+@include module("input")
+  @extend %block
+
+@include extend-module("input", "text")
+  background-color: white
+  border-color: color(gray)
+
+  &:focus
+    border-color: color(primary)
+
+@include build-module-sizes("input-text", $sizes)
+
+@include extend-module("input", "select")
+  background-color: white
+  border-color: color(gray)
+
+  display: inline-block
+
+  &:focus
+    border-color: color(primary)
+
+@include build-module("input-select")
+
+@include module("input-select-hidden")
+  display: none
+
+@include build-module("input-select-hidden")
