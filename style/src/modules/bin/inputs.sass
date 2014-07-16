@@ -8,7 +8,7 @@
 
 @include extend-module("input", "text")
   background-color: white
-  border-color: color(gray)
+  border-color: color(gray-127)
 
   &:focus
     border-color: color(primary)
@@ -18,7 +18,7 @@
 
 @include extend-module("input", "select")
   background-color: white
-  border-color: color(gray)
+  border-color: color(gray127)
 
   &.active
     overflow: auto
@@ -64,7 +64,7 @@
   height: 1.5rem
   display: inline-block
   background-color: color(white)
-  border: 1px solid color(gray)
+  border: 1px solid color(gray127)
   vertical-align: middle
 
   &.checked
@@ -80,7 +80,7 @@
   height: 2rem
   display: inline-block
   background-color: color(white)
-  border: 1px solid color(gray)
+  border: 1px solid color(gray127)
   vertical-align: middle
 
   &.checked::after
