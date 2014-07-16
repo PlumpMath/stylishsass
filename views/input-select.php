@@ -8,7 +8,7 @@
       <li class="input-select-item-option">South Africa</li>
     </ul>
   </div>
-  <select class="input-select-hidden">
+  <select class="hidden">
     <option value disabled>Select a Country</option>
     <option value="france">France</option>
     <option value="argentina">Argentina</option>
@@ -16,7 +16,6 @@
     <option value="south-africa">South Africa</option>
   </select>
 </div>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script>
   (function () {
     $(".input-select").on("click", function (e) {

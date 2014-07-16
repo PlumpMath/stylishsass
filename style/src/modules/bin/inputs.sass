@@ -25,10 +25,6 @@
     padding-bottom: 1.1rem
 @include build-module("input-select")
 
-@include module("input-select-hidden")
-  display: none
-@include build-module("input-select-hidden")
-
 @include module("input-select-item")
   width: 100%
 
@@ -60,3 +56,41 @@
   .active &
     opacity: 1
 @include build-module-size("input-select-item-option", nth($sizes, 2))
+
+// input-checkbox
+
+@include module("input-checkbox")
+  width: 1.5rem
+  height: 1.5rem
+  display: inline-block
+  background-color: color(white)
+  border: 1px solid color(gray)
+  vertical-align: middle
+
+  &.checked
+    @include multiple(background-color border-color, color(primary))
+@include build-module("input-checkbox")
+
+// input-radio
+
+@include module("input-radio")
+  position: relative
+  border-radius: 100%
+  width: 2rem
+  height: 2rem
+  display: inline-block
+  background-color: color(white)
+  border: 1px solid color(gray)
+  vertical-align: middle
+
+  &.checked::after
+    content: ""
+    position: absolute
+    top: 50%
+    left: 50%
+    -webkit-transform: translateY(-50%) translateX(-50%)
+    border-radius: 100%
+    width: 1.2rem
+    height: 1.2rem
+    background-color: color(primary)
+@include build-module("input-radio")

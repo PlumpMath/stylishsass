@@ -21,7 +21,7 @@ function view($view, $bin)
     <script src="app/main.js"></script>
   </head>
   <body class="DEVELOPMENT">
-
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <div class="test">
       test
     </div>
@@ -84,6 +84,50 @@ function view($view, $bin)
       <li class="style-item">
         <h3 override-style="none">Input Select</h3>
         <?= view('input-select', []); ?>
+      </li>
+      <li class="style-item">
+        <h3 override-style="none">Input Check Box</h3>
+        <div class="input-checkbox checked">
+          <input class="hidden" type="checkbox" name="checkbox-1"/>
+        </div>
+        <label for="checkbox-1">Check Box 1</label>
+        <div class="input-checkbox">
+          <input class="hidden" type="checkbox" name="checkbox-2"/>
+        </div>
+        <label for="checkbox-1">Check Box 2</label>
+        <script>
+          (function ()
+          {
+            $(".input-checkbox").on("click", function (e)
+            {
+              $(this).toggleClass("checked");
+            });
+          })();
+        </script>
+      </li>
+      <li class="style-item">
+        <h3 override-style="none">Input Check Box</h3>
+        <div class="input-radio checked">
+          <input class="hidden" type="radio" name="radio-1"/>
+        </div>
+        <label for"radio-1">Radio 1</label>
+        <div class="input-radio">
+          <input class="hidden" type="radio" name="radio-2"/>
+        </div>
+        <label for"radio-1">Radio 2</label>
+        <div class="input-radio">
+          <input class="hidden" type="radio" name="radio-3"/>
+        </div>
+        <label for"radio-1">Radio 3</label>
+        <script>
+          (function ()
+          {
+            $(".input-radio").on("click", function (e)
+            {
+              if ( ! $(this).hasClass("checked")) $(this).addClass("checked");
+            });
+          })();
+        </script>
       </li>
     </ul>
   </body>

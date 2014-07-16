@@ -1,4 +1,8 @@
 
+@mixin multiple($properties, $value)
+  @each $property in $properties
+    #{$property}: $value
+
 // http://hugogiraudel.com/2013/08/08/advanced-sass-list-functions/
 @function slice($list, $start: 1, $end: length($list))
   $result: null
