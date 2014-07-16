@@ -20,3 +20,8 @@
     .#{$module}-#{$size}
       @extend %#{$module}
       @extend %size-#{$size}
+
+@mixin build-module-size($module, $size)
+  .#{$module}
+    @extend %#{$module}
+    @extend %size-#{$size}

@@ -1,6 +1,12 @@
 @import "normalize"
 @import "development"
 
+@import "util/functions"
+
+@include font-face("Icons", ((url: "iconFont.ttf", format: "truetype"),))
+
+@import "icons/declare"
+
 @import "colors/declare"
 @import "colors/functions"
 
@@ -11,5 +17,7 @@
 
 @import "modules/declare"
 @import "modules/functions"
+
+@import "modules/bin/icons"
 @import "modules/bin/buttons"
 @import "modules/bin/inputs"

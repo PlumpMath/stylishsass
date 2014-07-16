@@ -12,8 +12,7 @@
 
   &:focus
     border-color: color(primary)
-
-@include build-module-sizes("input-text", $sizes)
+@include build-module-sizes("input-text", slice($sizes, 1, 2))
 
 // input-select
 
@@ -21,14 +20,43 @@
   background-color: white
   border-color: color(gray)
 
-  display: inline-block
-
-  &:focus
-    border-color: color(primary)
-
+  &.active
+    overflow: auto
+    padding-bottom: 1.1rem
 @include build-module("input-select")
 
 @include module("input-select-hidden")
   display: none
-
 @include build-module("input-select-hidden")
+
+@include module("input-select-item")
+  width: 100%
+
+@include extend-module("input-select-item", "placeholder")
+  position: relative
+  display: block
+
+  &::after
+    @extend .icon-down-arrow
+
+    position: absolute
+    right: 1.1rem
+    top: 50%
+
+    -webkit-transform: translateY(-50%)
+
+    .active &
+      -webkit-transform: scaleY(-1) translateY(50%)
+@include build-module-size("input-select-item-placeholder", nth($sizes, 2))
+
+@include extend-module("input-select-item", "option")
+  float: left
+  opacity: 0
+
+  &:hover
+    background-color: color(primary)
+    color: white
+
+  .active &
+    opacity: 1
+@include build-module-size("input-select-item-option", nth($sizes, 2))

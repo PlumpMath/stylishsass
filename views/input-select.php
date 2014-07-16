@@ -1,19 +1,11 @@
 <div class="input-select">
-  <span class="input-select-placeholder">Select a Country</span>
+  <span class="input-select-item-placeholder">Select a Country</span>
   <div class="input-select-options">
     <ul>
-      <li class="input-select-item">
-        <span>France</span>
-      </li>
-      <li class="input-select-item">
-        <span>Argentina</span>
-      </li>
-      <li class="input-select-item">
-        <span>Brazil</span>
-      </li>
-      <li class="input-select-item">
-        <span>South Africa</span>
-      </li>
+      <li class="input-select-item-option">France</li>
+      <li class="input-select-item-option">Argentina</li>
+      <li class="input-select-item-option">Brazil</li>
+      <li class="input-select-item-option">South Africa</li>
     </ul>
   </div>
   <select class="input-select-hidden">
@@ -24,4 +16,15 @@
     <option value="south-africa">South Africa</option>
   </select>
 </div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+  (function () {
+    $(".input-select").on("click", function (e) {
+      if ($(e.target).hasClass("input-select-item-option")) {
+        $(".input-select-item-placeholder").html($(e.target).html());
+      }
+      $(".input-select").toggleClass("active")
+    });
+  })();
+</script>
 
