@@ -34,3 +34,6 @@
       padding-top: nth($pads, $index)
       padding-bottom: nth($pads, $index)
       width: 100%
+
+@mixin size($size)
+  @extend %size-#{$size}

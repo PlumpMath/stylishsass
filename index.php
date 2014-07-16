@@ -88,7 +88,10 @@ function view($view, $bin)
       </li>
       <li class="style-item">
         <h3 override-style="none">Input Select</h3>
-        <?= view('input-select', []); ?>
+        <h4 override-style="none">small</h4>
+        <?= view('input-select', ['size' => 'small']); ?>
+        <h4 override-style="none">medium</h4>
+        <?= view('input-select', ['size' => 'medium']); ?>
       </li>
       <li class="style-item">
         <h3 override-style="none">Input Check Box</h3>

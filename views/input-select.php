@@ -1,4 +1,4 @@
-<div class="input-select-medium">
+<div class="input-select-<?=$size?>">
   <span class="input-select-item-placeholder">Select a Country</span>
   <div class="input-select-options">
     <ul>
@@ -19,12 +19,34 @@
 </div>
 <script>
   (function () {
-    $(".input-select-medium").on("click", function (e) {
-      if ($(e.target).hasClass("input-select-item-option")) {
-        $(".input-select-item-placeholder").html($(e.target).html());
+    var timeoutID = null;
+
+    $("body").on("click", function (event)
+    {
+      $(".input-select-small, .input-select-medium").each(function (index)
+      {
+        $(this).removeClass("active");
+      });
+
+      if ($(event.target).parents(".input-select-medium, .input-select-small").length) {
+        $(event.target).parents(".input-select-medium, .input-select-small").each(function (index)
+        {
+          $(this).toggleClass("active");
+        });
       }
-      $(".input-select-medium").toggleClass("active")
+
+      return false;
     });
+    /*
+    $.each($(".input-select-small, .input-select-medium"), function (index, value) {
+      value.on("click", function (e) {
+        if ($(e.target).hasClass("input-select-item-option")) {
+          $(".input-select-item-placeholder").html($(e.target).html());
+        }
+        $(this).toggleClass("active")
+      });
+    });
+    */
   })();
 </script>
 

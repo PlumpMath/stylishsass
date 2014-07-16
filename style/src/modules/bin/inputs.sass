@@ -29,13 +29,14 @@
   position: absolute
   top: 0
   left: 0
-  z-index: 10
+  z-index: 0
   background-color: white
   border-color: color(gray-127)
   width: 100%
 
   & .active
     overflow: auto
+    z-index: 10
 @include build-module("input-select-options")
 
 @include module("input-select-item")
@@ -45,8 +46,14 @@
 @include extend-module("input-select-item", "placeholder")
   position: relative
   pointer-events: none
-  z-index: 20
+  z-index: 1
   display: block
+
+  @include multiple-v(display, prefix(flex))
+  @include multiple(prefix(flex-direction), column-reverse)
+
+  .active &
+    z-index: 20
 
   &::before
     @extend .icon-down-arrow

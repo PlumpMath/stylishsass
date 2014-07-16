@@ -1,12 +1,19 @@
 
-@mixin prefix($property, $value, $p: $prefixes)
+@function prefix($x, $ps: $prefixes)
+  $return: ()
   @each $prefix in $p
-    -#{$prefix}-#{$property}: $value
-  #{$property}: $value
+    $return: append($return, -#{$p}-#{$x}, "comma")
+
+  @return $return
+    
 
 @mixin multiple($properties, $value)
   @each $property in $properties
     #{$property}: $value
+
+@mixin multiple-v($property, $values)
+  @each $value in $values
+    #{$property}: #{$value}
 
 // http://hugogiraudel.com/2013/08/08/advanced-sass-list-functions/
 @function slice($list, $start: 1, $end: length($list))
