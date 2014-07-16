@@ -1,3 +1,17 @@
+<?php
+
+function view($view, $bin)
+{
+  ob_start();
+
+  extract($bin);
+
+  @include 'views/' . $view . '.php';
+
+  return ob_get_clean();
+}
+
+?>
 <!doctype html>
 <html>
   <head>
@@ -41,15 +55,15 @@
         <h3 override-style="none">Button Over Image</h3>
         <h4 override-style="none">small</h4>
         <div class="DEVELOPMENT-IMAGE">
-          <button class="btn-image-small uppercase-bold">button</button>
+          <button class="btn-images-small uppercase-bold">button</button>
         </div>
         <h4 override-style="none">medium</h4>
         <div class="DEVELOPMENT-IMAGE">
-          <button class="btn-image-medium uppercase-bold">button</button>
+          <button class="btn-images-medium uppercase-bold">button</button>
         </div>
         <h4 override-style="none">large</h4>
         <div class="DEVELOPMENT-IMAGE">
-          <button class="btn-image-large uppercase-bold">button</button>
+          <button class="btn-images-large uppercase-bold">button</button>
         </div>
       </li>
     </ul>
@@ -61,6 +75,10 @@
         <input class="input-text-small" type="text"/>
         <h4 override-style="none">medium</h4>
         <input class="input-text-medium" type="text"/>
+      </li>
+      <li class="style-item">
+        <h3 override-style="none">Input Select</h3>
+        <?= view('input-select', []); ?>
       </li>
     </ul>
   </body>

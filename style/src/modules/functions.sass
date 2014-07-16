@@ -1,0 +1,23 @@
+@mixin build-module($name)
+  //@if index($modules, "#{$name}") == null
+  $modules: append($modules, "#{$name}", "comma") !global
+  %#{$name}
+    @content
+
+@mixin extend-module($super, $sub, $sizes_override: null)
+  //@if index($modules, "#{$super}-#{$sub}") == null
+  $modules: append($modules, "#{$super}-#{$sub}", "comma") !global
+  %#{$super}-#{$sub}
+    @extend %#{$super}
+    @content
+
+  @if $sizes_override == null
+    @each $size in $sizes
+      .#{$super}-#{$sub}-#{$size}
+        @extend %#{$super}-#{$sub}
+        @extend %size-#{$size}
+  @else
+    @each $size in $sizes_override
+      .#{$super}-#{$sub}-#{$size}
+        @extend %#{$super}-#{$sub}
+        @extend %size-#{$size}

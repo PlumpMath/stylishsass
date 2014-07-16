@@ -21,12 +21,12 @@
         @else
           $font-weight: $value 
 
-  font: unquote($font-weight) unquote($font-size) unquote($line-height) unquote($font-family)
+  font: unquote($font-weight) unquote($font-size + "/" + $line-height) $font-family
 
 @mixin build-sizes($sizes, $fonts, $pads)
   @for $index from 1 to length($sizes) + 1
     $name: nth($sizes, $index)
-    .size-#{$name}
+    %size-#{$name}
       @include font(nth($fonts, $index), 1) // override font-weight to unset
       padding: nth($pads, $index)
 
