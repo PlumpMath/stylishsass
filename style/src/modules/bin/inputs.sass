@@ -1,6 +1,10 @@
 
+// input
+
 @include module("input")
   @extend %block
+
+// input-text
 
 @include extend-module("input", "text")
   background-color: white
@@ -10,6 +14,8 @@
     border-color: color(primary)
 
 @include build-module-sizes("input-text", $sizes)
+
+// input-select
 
 @include extend-module("input", "select")
   background-color: white

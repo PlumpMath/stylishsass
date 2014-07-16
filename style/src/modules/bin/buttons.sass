@@ -4,8 +4,12 @@
   border-style: solid
   border-width: 1px
 
+// btn
+
 @include module("btn")
   @extend %block
+
+// btn-primary
 
 @include extend-module("btn", "primary")
   background-color: color(primary)
@@ -18,6 +22,8 @@
 
 @include build-module-sizes("btn-primary", $sizes)
 
+// btn-secondary
+
 @include extend-module("btn", "secondary")
   background-color: white
   border-color: color(primary)
@@ -29,6 +35,8 @@
 
 @include build-module-sizes("btn-secondary", $sizes)
 
+// btn-tertiary
+
 @include extend-module("btn", "tertiary")
   background-color: white
   border-color: color(gray)
@@ -39,6 +47,8 @@
     color: color(primary)
 
 @include build-module-sizes("btn-tertiary", $sizes)
+
+// btn-images
 
 @include extend-module("btn", "images")
   background-color: color-alpha(white, 0)
