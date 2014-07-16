@@ -1,0 +1,10 @@
+
+@function color($name)
+  $rgb: map-get($colors, $name)
+  $color: "rgb(" + nth($rgb, 1) + "," + nth($rgb, 2) + "," + nth($rgb, 3) + ")"
+  @return $color
+
+@function color-alpha($name, $alpha)
+  $rgb: map-get($colors, $name)
+  $color: "rgb(" + nth($rgb, 1) + "," + nth($rgb, 2) + "," + nth($rgb, 3) + "," + $alpha + ")"
+  @return $color

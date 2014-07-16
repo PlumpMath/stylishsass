@@ -1,9 +1,7 @@
-@import "base"
+@import "colors/declare"
+@import "colors/functions"
 
-@import "colors/imports"
-@import "sizes/imports"
+@import "sizes/declare"
+@import "sizes/functions"
 
-@import "buttons/imports"
-@import "inputs/imports"
-
-@import "dev/imports"
+@include build-sizes($sizes, (2, 4, 5), (0.8rem, 1.1rem, 1.5rem))
