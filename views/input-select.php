@@ -1,4 +1,4 @@
-<div class="input-select-wrapper">
+<div class="input-select">
   <span class="input-select-placeholder">Select a Country</span>
   <div class="input-select-options">
     <ul>
@@ -16,7 +16,7 @@
       </li>
     </ul>
   </div>
-  <select class="input-select">
+  <select class="input-select-hidden">
     <option value disabled>Select a Country</option>
     <option value="france">France</option>
     <option value="argentina">Argentina</option>

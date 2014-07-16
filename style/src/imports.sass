@@ -11,48 +11,4 @@
 
 @import "modules/declare"
 @import "modules/functions"
-
-%block
-  border-radius: 3px
-  border-style: solid
-  border-width: 1px
-
-@include build-module("btn")
-  @extend %block
-
-@include extend-module("btn", "primary")
-  background-color: color(primary)
-  border-color: color(primary)
-  color: white
-
-  &:hover
-    background-color: color(hover)
-    border-color: color(hover)
-
-@include extend-module("btn", "secondary")
-  background-color: white
-  border-color: color(primary)
-  color: color(primary)
-
-  &:hover
-    background-color: color(primary)
-    color: white
-
-@include extend-module("btn", "tertiary")
-  background-color: white
-  border-color: color(gray)
-  color: color(gray)
-
-  &:hover
-    border-color: color(primary)
-    color: color(primary)
-
-@include extend-module("btn", "images")
-  background-color: color-alpha(white, 0)
-  border-color: color(white)
-  color: color(white)
-
-  &:hover
-    background-color: color(white)
-    border-color: color(white)
-    color: color(primary)
+@import "modules"

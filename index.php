@@ -21,6 +21,11 @@ function view($view, $bin)
     <script src="app/main.js"></script>
   </head>
   <body class="DEVELOPMENT">
+
+    <div class="test">
+      test
+    </div>
+
     <h1 override-style="none">Style Tests</h1>
     <h2 override-style="none">Buttons</h2>
     <ul class="style-bin">
