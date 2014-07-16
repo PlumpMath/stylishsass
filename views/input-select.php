@@ -1,7 +1,8 @@
-<div class="input-select">
+<div class="input-select-medium">
   <span class="input-select-item-placeholder">Select a Country</span>
   <div class="input-select-options">
     <ul>
+      <li class="input-select-item-option invisible">Select a Country</li>
       <li class="input-select-item-option">France</li>
       <li class="input-select-item-option">Argentina</li>
       <li class="input-select-item-option">Brazil</li>
@@ -18,11 +19,11 @@
 </div>
 <script>
   (function () {
-    $(".input-select").on("click", function (e) {
+    $(".input-select-medium").on("click", function (e) {
       if ($(e.target).hasClass("input-select-item-option")) {
         $(".input-select-item-placeholder").html($(e.target).html());
       }
-      $(".input-select").toggleClass("active")
+      $(".input-select-medium").toggleClass("active")
     });
   })();
 </script>

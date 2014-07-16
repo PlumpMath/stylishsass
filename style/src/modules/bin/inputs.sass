@@ -9,32 +9,48 @@
 @include extend-module("input", "text")
   background-color: white
   border-color: color(gray-127)
+  color: color(gray-191)
+  text-indent: 1rem
 
   &:focus
     border-color: color(primary)
+    color: color(gray-0)
 @include build-module-sizes("input-text", slice($sizes, 1, 2))
 
 // input-select
 
-@include extend-module("input", "select")
+@include module("input-select")
   background-color: white
-  border-color: color(gray127)
+  position: relative
+  padding: 0
+@include build-module-sizes("input-select", slice($sizes, 1, 2))
 
-  &.active
+@include extend-module("input", "select-options")
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 10
+  background-color: white
+  border-color: color(gray-127)
+  width: 100%
+
+  & .active
     overflow: auto
-    padding-bottom: 1.1rem
-@include build-module("input-select")
+@include build-module("input-select-options")
 
 @include module("input-select-item")
   width: 100%
+  padding-left: 1rem
 
 @include extend-module("input-select-item", "placeholder")
   position: relative
+  pointer-events: none
+  z-index: 20
   display: block
 
-  &::after
+  &::before
     @extend .icon-down-arrow
-
+    color: color(gray-127)
     position: absolute
     right: 1.1rem
     top: 50%
@@ -46,14 +62,17 @@
 @include build-module-size("input-select-item-placeholder", nth($sizes, 2))
 
 @include extend-module("input-select-item", "option")
-  float: left
-  opacity: 0
+  display: none
+
+  &.invisible
+    display: block
 
   &:hover
     background-color: color(primary)
     color: white
 
-  .active &
+  .active & 
+    display: block
     opacity: 1
 @include build-module-size("input-select-item-option", nth($sizes, 2))
 
@@ -64,7 +83,7 @@
   height: 1.5rem
   display: inline-block
   background-color: color(white)
-  border: 1px solid color(gray127)
+  border: 1px solid color(gray-127)
   vertical-align: middle
 
   &.checked
@@ -80,7 +99,7 @@
   height: 2rem
   display: inline-block
   background-color: color(white)
-  border: 1px solid color(gray127)
+  border: 1px solid color(gray-127)
   vertical-align: middle
 
   &.checked::after

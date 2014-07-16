@@ -18,7 +18,6 @@ function view($view, $bin)
     <title>Branding Test Page</title>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="style/build/main.css">
-    <script src="app/main.js"></script>
   </head>
   <body class="DEVELOPMENT">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -75,7 +74,7 @@ function view($view, $bin)
     <h2>Tabs</h2>
     <ul class="style-bin">
       <li class="style-item">
-        
+
       </li>
     </ul>
     <h2 override-style="none">Inputs</h2>

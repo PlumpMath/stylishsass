@@ -1,6 +1,6 @@
 
-@mixin prefix($property, $value)
-  @each $prefix in $prefixes
+@mixin prefix($property, $value, $p: $prefixes)
+  @each $prefix in $p
     -#{$prefix}-#{$property}: $value
   #{$property}: $value
 

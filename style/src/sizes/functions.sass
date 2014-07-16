@@ -1,11 +1,11 @@
 
-@mixin font($id, $weight, $overrides:"")
+@mixin font($fontID, $weightID, $overrides:"")
   $font-family: ""
   $font-size: ""
   $line-height: ""
   $font-weight: ""
 
-  @each $options in (nth($fonts, $id), $overrides)
+  @each $options in (map-get($fonts, $fontID), $overrides)
     @each $name, $value in $options
       @if $name == font-family
         $font-family: $value
@@ -17,19 +17,20 @@
         $font-weight: $value
       @else if $name == weights
         @if type-of($value) == "list"
-          $font-weight: nth($value, $weight)
+          $font-weight: map-get($value, $weightID)
         @else
           $font-weight: $value 
 
   font-family: $font-family
   font-weight: unquote($font-weight)
   font-size: unquote($font-size)
-  line-height: $line-height
+  line-height: unquote($line-height)
 
 @mixin build-sizes($sizes, $fonts, $pads)
   @for $index from 1 to length($sizes) + 1
     $name: nth($sizes, $index)
     %size-#{$name}
-      @include font(nth($fonts, $index), 1, (font-weight: "")) // override font-weight to unset
-      padding: nth($pads, $index)
+      @include font(nth($fonts, $index), thin, (font-weight: "")) // override font-weight to unset
+      padding-top: nth($pads, $index)
+      padding-bottom: nth($pads, $index)
       width: 100%
