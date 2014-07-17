@@ -34,12 +34,42 @@
         $module-class: $module-class + "-" + $parameter
     @else if $parameters != null
       $module-class: $module-class + "-" + $parameters
-
+  
     .#{$module-class}
       @extend %#{$name}
       @content
   @else
     +error("Cannot instantiate non-existant module, `#{$name}`.")
+
+// public mixin extend
+//    multiple inheritance
+//    @param  $name     name of module to extend
+
+=extend($name)
+  $module: _get-module($name)
+
+  @if $module != null
+    @extend %#{$name}
+  @else
+    +error("Cannot extend non-existant module, `#{$name}`.")
+
+=link-size($name, $sizes)
+  $module: _get-module($name)
+
+  @if $module != null
+    $module-class: map-get($module, class)
+
+    @if type-of($sizes) == "list"
+      @each $size in $sizes
+        $class: $module-class + "-" + $size
+
+        .#{$class} &
+          +size($size)
+
+    @else if $sizes != null
+      $module-class: $module-class + "-" + $sizes
+  @else
+    +error("Cannot link to non-existant module, `#{$name}`.")
 
 // private function _build-class
 //    used by def to build module class

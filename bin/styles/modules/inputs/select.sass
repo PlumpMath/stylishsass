@@ -1,0 +1,68 @@
++def("SelectInput", $class: "input-select", $parent: "Input")
+  background-color: white
+  position: relative
+
++new("SelectInput", "small")
+
++new("SelectInput", "medium")
+
++def("SelectInputChild", $class: "input-select-child")
+  width: 100%
+  padding-left: $text-offset
+
+  +link-size("SelectInput", ("small", "medium"))
+
++def("SelectOptions", $class: "input-select-options", $parent: "InputRadius")
+  width: 100%
+
+  position: absolute
+  top: 0
+  left: 0
+
+  z-index: 10
+
+  background-color: white
+  border-color: color(gray-127)
+
+  .active &
+    overflow: auto
+
++new("SelectOptions")
+
++def("SelectPlaceholder", $class: "input-select-placeholder", $parent: "SelectItem")
+  position: relative
+  z-index: 20
+  display: block
+
+  &::before
+    @extend .icon-down-arrow
+
+    color: color(gray-127)
+
+    position: absolute
+    right: 1.1rem
+    top: 50%
+
+    +prefix(transform, translateY(-50%))
+
+    .active &
+      +prefix(transform, "scaleY(-1) translateY(50%)")
+
++new("SelectPlaceholder")
+
++def("SelectOption", $class: "input-select-option", $parent: "SelectItem")
+  display: none
+
+  &:hover
+    background-color: color(primary)
+    color: white
+
+  .active & 
+    display: block
+    visibility: visible
+
++new("SelectOption")
+
++new("SelectOption", "invisible")
+  display: block
+  visibility: hidden

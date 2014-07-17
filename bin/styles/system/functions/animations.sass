@@ -1,0 +1,16 @@
+
+// public function color
+//    return color with given name
+//    @see $colors
+//    @param  $name         name of key in $colors
+//    @return               color value
+
+=keyframes($name)
+  @each $prefix in $_prefixes
+    @-#{$prefix}-keyframes
+      @content
+
+=at($points)
+  @each $point in $points
+    #{$point}%
+      @content

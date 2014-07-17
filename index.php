@@ -146,6 +146,61 @@ $lists = [
         ]
       ],
       [
+        'name' => 'select',
+        'items' => [
+          [
+            'name' => 'small',
+            'file' => 'input-select',
+            'items' => [
+              'class' => 'input-select-small',
+              'name'  => 'Placeholder',
+              'items' => [
+                [
+                  'name' => 'Placeholder',
+                  'value' => 'null',
+                  'placeholder' => true
+                ],
+                [
+                  'name' => 'Option 1',
+                  'value' => 'option_1'
+                ],
+                [
+                  'name' => 'Option 2',
+                  'value' => 'option_2'
+                ],
+                [
+                  'name' => 'Option 3',
+                  'value' => 'option_3'
+                ],
+              ]
+            ]
+          ],
+          [
+            'name' => 'medium',
+            'file' => 'input-select',
+            'items' => [
+              'class' => 'input-select-medium',
+              'name'  => 'Placeholder',
+              'items' => [
+                [
+                  'name' => 'Placeholder',
+                  'value' => 'null',
+                  'placeholder' => true
+                ],
+                [
+                  'name' => 'Option 2',
+                  'value' => 'option_2'
+                ],
+                [
+                  'name' => 'Option 3',
+                  'value' => 'option_3'
+                ],
+              ]
+            ]
+          ],
+        ]
+      ],
+      [
         'name' => 'checkbox',
         'items' => [
           [
@@ -508,6 +563,162 @@ $lists = [
             'file' => 'icon',
             'items' => [
               'class' => 'icon-yield'
+            ]
+          ],
+        ]
+      ],
+      [
+        'name' => 'graph',
+        'items' => [
+          [
+            'name' => 'default',
+            'file' => 'icon',
+            'items' => [
+              'class' => 'icon-graph'
+            ]
+          ],
+        ]
+      ],
+      [
+        'name' => 'copy',
+        'items' => [
+          [
+            'name' => 'default',
+            'file' => 'icon',
+            'items' => [
+              'class' => 'icon-copy'
+            ]
+          ],
+        ]
+      ],
+      [
+        'name' => 'signpost',
+        'items' => [
+          [
+            'name' => 'default',
+            'file' => 'icon',
+            'items' => [
+              'class' => 'icon-signpost'
+            ]
+          ],
+        ]
+      ],
+      [
+        'name' => 'book',
+        'items' => [
+          [
+            'name' => 'default',
+            'file' => 'icon',
+            'items' => [
+              'class' => 'icon-book'
+            ]
+          ],
+        ]
+      ],
+      [
+        'name' => 'utensils',
+        'items' => [
+          [
+            'name' => 'default',
+            'file' => 'icon',
+            'items' => [
+              'class' => 'icon-utensils'
+            ]
+          ],
+        ]
+      ],
+      [
+        'name' => 'grad',
+        'items' => [
+          [
+            'name' => 'default',
+            'file' => 'icon',
+            'items' => [
+              'class' => 'icon-grad'
+            ]
+          ],
+        ]
+      ],
+      [
+        'name' => 'medical',
+        'items' => [
+          [
+            'name' => 'default',
+            'file' => 'icon',
+            'items' => [
+              'class' => 'icon-medical'
+            ]
+          ],
+        ]
+      ],
+      [
+        'name' => 'picture',
+        'items' => [
+          [
+            'name' => 'default',
+            'file' => 'icon',
+            'items' => [
+              'class' => 'icon-picture'
+            ]
+          ],
+        ]
+      ],
+      [
+        'name' => 'bed',
+        'items' => [
+          [
+            'name' => 'default',
+            'file' => 'icon',
+            'items' => [
+              'class' => 'icon-bed'
+            ]
+          ],
+        ]
+      ],
+      [
+        'name' => 'golpher',
+        'items' => [
+          [
+            'name' => 'default',
+            'file' => 'icon',
+            'items' => [
+              'class' => 'icon-golpher'
+            ]
+          ],
+        ]
+      ],
+      [
+        'name' => 'message',
+        'items' => [
+          [
+            'name' => 'default',
+            'file' => 'icon',
+            'items' => [
+              'class' => 'icon-message'
+            ]
+          ],
+        ]
+      ],
+      [
+        'name' => 'apple',
+        'items' => [
+          [
+            'name' => 'default',
+            'file' => 'icon',
+            'items' => [
+              'class' => 'icon-apple'
+            ]
+          ],
+        ]
+      ],
+      [
+        'name' => 'android',
+        'items' => [
+          [
+            'name' => 'default',
+            'file' => 'icon',
+            'items' => [
+              'class' => 'icon-android'
             ]
           ],
         ]
