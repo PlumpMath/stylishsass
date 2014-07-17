@@ -8,3 +8,13 @@
 
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
+
+
++def("CircleIcon", $class: "icon")
+  border-radius: 100%
+  padding: 0.27em
+  border:
+    style: solid
+    width: 0.09em
+
++def("DonutIcon", $class: "icon", $parent: "CircleIcon")

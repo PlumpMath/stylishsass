@@ -700,6 +700,30 @@ $lists = [
         ]
       ],
       [
+        'name' => 'message',
+        'items' => [
+          [
+            'name' => 'donut',
+            'file' => 'icon',
+            'items' => [
+              'class' => 'icon-message-donut'
+            ]
+          ],
+        ]
+      ],
+      [
+        'name' => 'message',
+        'items' => [
+          [
+            'name' => 'circle',
+            'file' => 'icon',
+            'items' => [
+              'class' => 'icon-message-circle'
+            ]
+          ],
+        ]
+      ],
+      [
         'name' => 'apple',
         'items' => [
           [

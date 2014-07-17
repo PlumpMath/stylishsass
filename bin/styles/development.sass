@@ -8,3 +8,20 @@
 
 .hidden
   display: none
+
+%Icon
+  color: color(primary)
+
+%CircleIcon
+  +multiple((background-color, border-color), color(primary))
+  color: white
+
+%DonutIcon
+  background-color: white
+  +multiple((color, border-color), color(primary))
+
+ul
+  list-style: none
+
+h1, h2, h3, h4, h5, h6
+  font-weight: inherit

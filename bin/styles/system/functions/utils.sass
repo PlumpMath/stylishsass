@@ -131,7 +131,7 @@
       @else if $name == font-weight
         $font-weight: $value
       @else if $name == weights
-        @if type-of($value) == "list"
+        @if type-of($value) == "map"
           $font-weight: map-get($value, $weightID)
         @else
           $font-weight: $value 
