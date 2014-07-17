@@ -107,6 +107,12 @@
 =prefix($property, $value, $prefixes: $_prefixes)
   +multiple(prefix($property, $prefixes), unquote($value))
 
+// public mixin font
+//    adds default font styles
+//    @see $font
+//    @param  $fontID       ID from $font / styleguide
+//    @param  $weightID     thick or thin, from $_font-weights
+//    @param  $overrides    values to override default font styles
 
 =font($fontID, $weightID, $overrides:"")
   $font-family: ""
@@ -135,14 +141,29 @@
   font-size: unquote($font-size)
   line-height: unquote($line-height)
 
-=build-sizes($sizes, $fonts, $pads)
+// public mixin build-sizes
+//    builds size placeholders
+//    @see $sizes
+//    @param  $fonts        list of fontIDs, @see $font
+//    @param  $pads         list of paddings for each size
+//    @param  $sizes        (optional) list of styles to build, defaults to $_sizes
+
+=build-sizes($fonts, $pads, $sizes: $_sizes)
   @for $index from 1 to length($sizes) + 1
     $name: nth($sizes, $index)
+
     %size-#{$name}
       @include font(nth($fonts, $index), thin, (font-weight: "")) // override font-weight to unset
+
       padding-top: nth($pads, $index)
       padding-bottom: nth($pads, $index)
+
       width: 100%
+
+// public mixin size
+//    shortcut to extend size with given name
+//    @see =build-sizes
+//    @param  $size         name of size, @see $_sizes
 
 =size($size)
   @extend %size-#{$size}

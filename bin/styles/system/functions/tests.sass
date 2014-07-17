@@ -2,16 +2,16 @@
 // public mixin test
 //    create test
 //    @param  $name     name of test
-//    @param  $this     the value to test
-//    @param  $that     the value to test against
 
 =test($name)
   %tests
     @testing (#{$name})
     @content
 
-// public mixin run-tests
-//    run tests
+// public mixin assert-equal
+//    check if two values are equal
+//    @param  $this     the value to test
+//    @param  $that     the value to test against   
 
 =assert-equal($this, $that)
   /* test #{length($_tests) + 1} */
@@ -24,6 +24,7 @@
 
 // public mixin run-tests
 //    run tests
+//    @param  $yes          boolean, true or false, true to run tests
 
 =run-tests($yes)
 

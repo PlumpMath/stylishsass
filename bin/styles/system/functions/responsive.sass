@@ -1,5 +1,11 @@
 
-@function map($map, $string)
+// public function access
+//    access map from given string
+//    @param  $map          map to access
+//    @param  $string       string represent key to access
+//    @return               value at key
+
+@function access($map, $string)
   $length: str-index($string, ".")
   @if $length == null
     @return map-get($map, unquote($string))
@@ -7,6 +13,7 @@
     $key: str-slice($string, 1, $length - 1)
     @return map(map-get($map, unquote($key)), str-slice($string, $length + 1))
 
+// test map
 
 +test("map")
   $list: (a: (b: 0, c: 1), d: 2)

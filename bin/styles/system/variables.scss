@@ -46,33 +46,41 @@ $colors: (
   black: (0, 0, 0)
 );
 
-$sizes: ("small", "medium", "large");
+// private $sizes
+//    list of sizes
+
+$_sizes: ("small", "medium", "large");
+
+
+// public $font-family
+//    font-family to use
 
 $font-family: "Open Sans", sans-serif;
 
-$font-weights: (regular: (thin: 400), regular-bold: (thin: 400, thick: 700), light-bold: (thin: 100, thick: 700));
+// private $_font-weights
+//    map of shortcuts to combinations of font weights
+//    @see $fonts
 
-$font-heights: (175%, 150%, 166.7%);
+$_font-weights: (regular: (thin: 400), regular-bold: (thin: 400, thick: 700), light-bold: (thin: 100, thick: 700));
 
-$fonts: (
-  // 1
+// private $_font-heights
+//    list of font heights
+//    @see $fonts
+
+$_font-heights: (175%, 150%, 166.7%);
+
+// private $_fonts
+//    mapping font-size names to full styles
+
+$_fonts: (
   12: (font-family: $font-family, font-size: 1.2rem, line-height: nth($font-heights, 1), weights: map-get($font-weights, regular)),
-  // 2
   14: (font-family: $font-family, font-size: 1.4rem, line-height: nth($font-heights, 1), weights: map-get($font-weights, regular)),
-  // 3
   16: (font-family: $font-family, font-size: 1.6rem, line-height: nth($font-heights, 2), weights: map-get($font-weights, regular-bold)),
-  // 4
   18: (font-family: $font-family, font-size: 1.8rem, line-height: nth($font-heights, 2), weights: map-get($font-weights, regular)),
-  // 5
   20: (font-family: $font-family, font-size: 2.0rem, line-height: nth($font-heights, 2), weights: map-get($font-weights, regular-bold)),
-  // 6
   26: (font-family: $font-family, font-size: 2.6rem, line-height: nth($font-heights, 3), weights: map-get($font-weights, light-bold)),
-  // 7
   32: (font-family: $font-family, font-size: 3.2rem, line-height: nth($font-heights, 3), weights: map-get($font-weights, light-bold)),
-  // 8
   40: (font-family: $font-family, font-size: 4.0rem, line-height: nth($font-heights, 3), weights: map-get($font-weights, light-bold)),
-  // 9
-  50: (font-family: $font-family, font-size: 5.0rem, line-height: nth($font-heights, 3), weights: map-get($font-weights, light-bold)),
-  // 10
+  50: (font-family: $font-family, font-size: 5.0rem, line-height: nth($font-heights, 3), weights: map-get($font-weights, light-bold)),0
   70: (font-family: $font-family, font-size: 7.0rem, line-height: nth($font-heights, 3), weights: map-get($font-weights, light-bold)),
 );

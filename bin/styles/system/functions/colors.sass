@@ -1,13 +1,30 @@
 
+// public function color
+//    return color with given name
+//    @see $colors
+//    @param  $name         name of key in $colors
+//    @return               color value
+
 @function color($name)
   $rgb: map-get($colors, $name)
   $color: unquote("rgb(#{$rgb})")
   @return $color
 
+// public function color-alpha
+//    return color with given name and alpha
+//    @see $colors
+//    @param  $name         name of key in $colors
+//    @param  $alpha        alpha value
+//    @return               color value
+
 @function color-alpha($name, $alpha)
   $rgb: map-get($colors, $name)
   $color: unquote("rgba(#{$rgb}, #{$alpha})")
   @return $color
+
+// public function clear
+//    return transparent color
+//    @return               transparent
 
 @function clear()
   @return rgba(0,0,0,0)
