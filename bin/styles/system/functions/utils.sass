@@ -109,7 +109,7 @@
 
 // public mixin font
 //    adds default font styles
-//    @see $font
+//    @see $_fonts
 //    @param  $fontID       ID from $font / styleguide
 //    @param  $weightID     thick or thin, from $_font-weights
 //    @param  $overrides    values to override default font styles
@@ -120,7 +120,7 @@
   $line-height: ""
   $font-weight: ""
 
-  @each $options in (map-get($fonts, $fontID), $overrides)
+  @each $options in (map-get($_fonts, $fontID), $overrides)
     @each $name, $value in $options
       @if $name == font-family
         $font-family: $value
@@ -143,7 +143,7 @@
 
 // public mixin build-sizes
 //    builds size placeholders
-//    @see $sizes
+//    @see $_sizes
 //    @param  $fonts        list of fontIDs, @see $font
 //    @param  $pads         list of paddings for each size
 //    @param  $sizes        (optional) list of styles to build, defaults to $_sizes
