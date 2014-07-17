@@ -1,0 +1,65 @@
+
+// public mixin def
+//    define a module
+//    @param  $name     name of module
+//    @param  $class    override module class
+//    @param  $parent   name of module to extend
+
+=def($name, $class: null, $parent: null)
+  @if _get-module($name) == null
+    @if $class == null
+      $class: _build-class($name, $parent)
+
+    $_modules: map-merge($_modules, (#{$name}: (class: $class, parent: $parent))) !global
+
+    %#{$name}
+      @if $parent != null
+        @extend %#{$parent}
+      @content
+  @else
+    +error("Cannot redefine module, `#{$name}`.")
+
+// public mixin new
+//    instantiate module
+//    @param  $name     name of module to instantiate
+
+=new($name, $parameters: null)
+  $module: _get-module($name)
+
+  @if $module != null
+    $module-class: map-get($module, class)
+
+    @if type-of($parameters) == "list"
+      @each $parameter in $parameters
+        $module-class: $module-class + "-" + $parameter
+    @else if $parameters != null
+      $module-class: $module-class + "-" + $parameters
+
+    .#{$module-class}
+      @extend %#{$name}
+      @content
+  @else
+    +error("Cannot instantiate non-existant module, `#{$name}`.")
+
+// private function _build-class
+//    used by def to build module class
+//    @param  $name     name of module
+//    @param  $parent   parent of module
+//    @return           module class
+
+@function _build-class($name, $parent)
+  $parent: _get-module($parent)
+
+  @if $parent != null
+    $parent-class: map-get($parent, class)
+    @return $parent-class + "-" + $name
+  @else
+    @return $name
+
+// private function _get-module
+//    used by def and new to find module from $_modules map
+//    @param  $name     name of module to find
+//    @return           module
+
+@function _get-module($name)
+  @return map-get($_modules, $name)

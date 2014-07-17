@@ -1,0 +1,148 @@
+
+// public mixin error
+//    throw an error
+//    @param  $msg      error message
+
+=error($msg)
+  /* Error: #{$msg} */
+
+  body::before
+    white-space: pre
+    font-family: monospace
+    content: "Error: " + $msg
+
+// public function slice
+//    slice a list
+//    @param  $list     list to slice
+//    @param  $start    (optional) start index
+//    @param  $length   (optional) length to slice
+//    @return           sliced list
+
+@function slice($list, $start: 1, $length: length($list))
+  $ret: ()
+
+  @for $index from $start to $start + $length
+    @if $index < length($list) + 1
+      $ret: append($ret, nth($list, $index), "comma")
+
+  @return $ret
+
++test("slice")
+  $list: (0, 1, 2, 3, 4)
+
+  $this: slice($list, 2, 2)
+  $that: (1, 2)
+
+  +assert-equal($this, $that)
+
+  $this: slice($list, 2, 5)
+  $that: (1, 2, 3, 4)
+
+  +assert-equal($this, $that)
+
+// public mixin multiple
+//    assign multiple properties and/or values
+//    @param  $properties   properties list
+//    @param  $values       values list
+
+=multiple($properties, $values)
+  @if type-of($properties) == "list" and type-of($values) == "list"
+    +_multiple-properties-and-values($properties, $values)
+  @else if type-of($properties) == "list"
+    +_multiple-properties($properties, $values)
+  @else if type-of($values) == "list"
+    +_multiple-values($properties, $values)
+  @else
+    #{$properties}: $values
+
+// private mixin _multiple-properties
+//    assign multiple properties to a value
+//    @param  $properties   properties list
+//    @param  $values       value
+
+=_multiple-properties($properties, $value)
+  @each $property in $properties
+    #{$property}: $value
+
+// private mixin _multiple-values
+//    assign a property to multiple values
+//    @param  $property     property
+//    @param  $values       values list
+
+=_multiple-values($property, $values)
+  @each $value in $values
+    #{$property}: $value
+
+// private mixin _multiple-properties-and-values
+//    assign a property to multiple values
+//    @param  $property     property
+//    @param  $values       values list
+
+=_multiple-properties-and-values($properties, $values)
+  @if length($properties) != length($values)
+    +error("Properties (#{$properties}) and values (#{$values}) are not the same length.")
+
+  @for $index from 1 through length($properties)
+    #{nth($properties, $index)}: nth($value, $index)
+
+// public function prefix
+//    returns a list of prefixed values
+//    @param  $value      string to prefix
+//    @param  $prefixes   (optional) vendor prefixes, defaults to $_prefixes
+
+@function prefix($value, $prefixes: $_prefixes)
+  $ret: ()
+
+  @each $prefix in $prefixes
+    $ret: append($ret, "-#{$prefix}-#{$value}", "comma")
+
+  @return $ret
+
+// public mixin prefix
+//    adds vendor prefixes to a property
+//    @param  $property     property to prefix
+//    @param  $value        value to assign to property
+//    @param  prefixes      (optional) vendor prefixes, defaults to $_prefixes
+
+=prefix($property, $value, $prefixes: $_prefixes)
+  +multiple(prefix($property, $prefixes), unquote($value))
+
+
+=font($fontID, $weightID, $overrides:"")
+  $font-family: ""
+  $font-size: ""
+  $line-height: ""
+  $font-weight: ""
+
+  @each $options in (map-get($fonts, $fontID), $overrides)
+    @each $name, $value in $options
+      @if $name == font-family
+        $font-family: $value
+      @else if $name == font-size
+        $font-size: $value
+      @else if $name == line-height
+        $line-height: $value
+      @else if $name == font-weight
+        $font-weight: $value
+      @else if $name == weights
+        @if type-of($value) == "list"
+          $font-weight: map-get($value, $weightID)
+        @else
+          $font-weight: $value 
+
+  font-family: $font-family
+  font-weight: unquote($font-weight)
+  font-size: unquote($font-size)
+  line-height: unquote($line-height)
+
+=build-sizes($sizes, $fonts, $pads)
+  @for $index from 1 to length($sizes) + 1
+    $name: nth($sizes, $index)
+    %size-#{$name}
+      @include font(nth($fonts, $index), thin, (font-weight: "")) // override font-weight to unset
+      padding-top: nth($pads, $index)
+      padding-bottom: nth($pads, $index)
+      width: 100%
+
+=size($size)
+  @extend %size-#{$size}

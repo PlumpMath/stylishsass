@@ -1,0 +1,16 @@
+
++def("TertiaryButton", $class: "btn-tertiary", $parent: "Button")
+  +multiple((color, border-color), color(gray-127))
+  background-color: white
+
+  &:hover
+    +multiple((color, border-color), color(primary))
+
++new("TertiaryButton", "small")
+  +size("small")
+
++new("TertiaryButton", "medium")
+  +size("medium")
+
++new("TertiaryButton", "large")
+  +size("large")

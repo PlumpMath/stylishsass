@@ -1,0 +1,41 @@
+
+// public mixin test
+//    create test
+//    @param  $name     name of test
+//    @param  $this     the value to test
+//    @param  $that     the value to test against
+
+=test($name)
+  %tests
+    @testing (#{$name})
+    @content
+
+// public mixin run-tests
+//    run tests
+
+=assert-equal($this, $that)
+  /* test #{length($_tests) + 1} */
+  @if $this == $that
+    @ok (#{$this}) is (#{$that})
+    $_tests: append($_tests, true) !global
+  @else
+    @fail (#{$this}) is not (#{$that})
+    $_tests: append($_tests, false) !global
+
+// public mixin run-tests
+//    run tests
+
+=run-tests($yes)
+
+  @if $yes
+    results
+      @extend %tests
+
+
+    $passed: 0
+
+    @each $test in $_tests
+      @if $test
+        $passed: $passed + 1
+
+    /* #{$passed} out of #{length($_tests)} passing */

@@ -1,0 +1,16 @@
+
++def("PrimaryButton", $class: "btn-primary", $parent: "Button")
+  +multiple((background, border-color), color(primary))
+  color: white
+
+  &:hover
+    +multiple((background, border-color), color(hover))
+
++new("PrimaryButton", "small")
+  +size("small")
+
++new("PrimaryButton", "medium")
+  +size("medium")
+
++new("PrimaryButton", "large")
+  +size("large")

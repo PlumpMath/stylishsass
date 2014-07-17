@@ -1,0 +1,17 @@
+
+@function map($map, $string)
+  $length: str-index($string, ".")
+  @if $length == null
+    @return map-get($map, unquote($string))
+  @else
+    $key: str-slice($string, 1, $length - 1)
+    @return map(map-get($map, unquote($key)), str-slice($string, $length + 1))
+
+
++test("map")
+  $list: (a: (b: 0, c: 1), d: 2)
+
+  $this: map($list, "a.c")
+  $that: map-get(map-get($list, a), c)
+
+  +assert-equal($this, $that)

@@ -1,0 +1,15 @@
+
++def("CheckboxInput", $class: "input-checkbox", $parent: "Input")
+  width: 1.5rem
+  height: 1.5rem
+
+  display: inline-block
+
+  vertical-align: middle
+
++new("CheckboxInput")
+  background-color: color(white)
+  border-color: color(gray-127)
+
++new("CheckboxInput", "checked")
+  @include multiple((background-color, border-color), color(primary))

@@ -1,0 +1,17 @@
+
++def("ImagesButton", $class: "btn-images", $parent: "Button")
+  +multiple((color, border-color), color(white))
+  background-color: clear()
+
+  &:hover
+    +multiple((background, border-color), color(white))
+    color: color(primary)
+
++new("ImagesButton", "small")
+  +size("small")
+
++new("ImagesButton", "medium")
+  +size("medium")
+
++new("ImagesButton", "large")
+  +size("large")

@@ -1,0 +1,17 @@
+
++def("SecondaryButton", $class: "btn-secondary", $parent: "Button")
+  +multiple((color, border-color), color(primary))
+  background-color: white
+
+  &:hover
+    background-color: color(primary)
+    color: white
+
++new("SecondaryButton", "small")
+  +size("small")
+
++new("SecondaryButton", "medium")
+  +size("medium")
+
++new("SecondaryButton", "large")
+  +size("large")

@@ -1,0 +1,17 @@
+
++def("TextInput", $class: "input-text", $parent: "InputRadius")
+  background-color: white
+  border-color: color(gray-127)
+  color: color(gray-191)
+
+  text-indent: 1rem
+
+  &:focus
+    border-color: color(primary)
+    color: color(gray-0)
+
++new("TextInput", "small")
+  +size("small")
+
++new("TextInput", "medium")
+  +size("medium")
