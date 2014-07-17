@@ -61,6 +61,17 @@ $font-family: "Open Sans", sans-serif;
 
 $_icon-font: "Icons";
 
+// private $_font-formats
+//    map of formats
+//    @see =font-face
+
+$_font-formats: (default: "eot", embedded-opentype: "eot?#iefix", woff: "woff", truetype: "ttf", svg: "svg#myfontregular");
+
+// private $_fonts-path
+//    directory of fonts
+
+$_fonts-path: "bin/fonts/";
+
 // private $_font-weights
 //    map of shortcuts to combinations of font weights
 //    @see $fonts

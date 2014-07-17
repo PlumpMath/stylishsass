@@ -141,6 +141,26 @@
   font-size: unquote($font-size)
   line-height: unquote($line-height)
 
+// public mixin font-face
+//    builds @font-face
+//    @param  $name        font-family name for font
+//    @param  $file        name of file to import
+//    @param  $path        (optional) directory containing font, defaults to $_fonts-path
+//    @param  $formats     (optional) formats to download, defaults to $_font-formats
+
+=font-face($name, $file, $path: $_fonts-path, $formats: $_font-formats)
+  @font-face
+    font-family: $name
+
+    @each $format, $ext in $formats
+      @if $format == default
+        src: url('#{$path}#{$file}.#{$ext}')
+      @else
+        src: url('#{$path}#{$file}.#{$ext}') format($format)
+
+    font-weight: normal
+    font-style: normal
+
 // public mixin build-sizes
 //    builds size placeholders
 //    @see $_sizes
