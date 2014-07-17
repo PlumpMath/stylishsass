@@ -21,21 +21,21 @@ $lists = [
         'name' => 'primary',
         'items' => [
           [
-            'name' => 'small',
+            'name' => '.btn-primary-small',
             'file' => 'button',
             'items' => [
               'class' => 'btn-primary-small',
             ]
           ],
           [
-            'name' => 'medium',
+            'name' => '.btn-primary-medium',
             'file' => 'button',
             'items' => [
               'class' => 'btn-primary-medium',
             ]
           ],
           [
-            'name' => 'large',
+            'name' => '.btn-primary-large',
             'file' => 'button',
             'items' => [
               'class' => 'btn-primary-large',
@@ -47,21 +47,21 @@ $lists = [
         'name' => 'secondary',
         'items' => [
           [
-            'name' => 'small',
+            'name' => '.btn-secondary-small',
             'file' => 'button',
             'items' => [
               'class' => 'btn-secondary-small',
             ]
           ],
           [
-            'name' => 'medium',
+            'name' => '.btn-secondary-medium',
             'file' => 'button',
             'items' => [
               'class' => 'btn-secondary-medium',
             ]
           ],
           [
-            'name' => 'large',
+            'name' => '.btn-secondary-large',
             'file' => 'button',
             'items' => [
               'class' => 'btn-secondary-large',
@@ -73,21 +73,21 @@ $lists = [
         'name' => 'tertiary',
         'items' => [
           [
-            'name' => 'small',
+            'name' => '.btn-tertiary-small',
             'file' => 'button',
             'items' => [
               'class' => 'btn-tertiary-small',
             ]
           ],
           [
-            'name' => 'medium',
+            'name' => '.btn-tertiary-medium',
             'file' => 'button',
             'items' => [
               'class' => 'btn-tertiary-medium',
             ]
           ],
           [
-            'name' => 'large',
+            'name' => '.btn-tertiary-large',
             'file' => 'button',
             'items' => [
               'class' => 'btn-tertiary-large',
@@ -99,21 +99,21 @@ $lists = [
         'name' => 'images',
         'items' => [
           [
-            'name' => 'small',
+            'name' => '.btn-images-small',
             'file' => 'image-button',
             'items' => [
               'class' => 'btn-images-small',
             ]
           ],
           [
-            'name' => 'medium',
+            'name' => '.btn-images-medium',
             'file' => 'image-button',
             'items' => [
               'class' => 'btn-images-medium',
             ]
           ],
           [
-            'name' => 'large',
+            'name' => '.btn-images-large',
             'file' => 'image-button',
             'items' => [
               'class' => 'btn-images-large',
@@ -130,14 +130,14 @@ $lists = [
         'name' => 'text',
         'items' => [
           [
-            'name' => 'small',
+            'name' => '.input-text-small',
             'file' => 'input-text',
             'items' => [
               'class' => 'input-text-small'
             ]
           ],
           [
-            'name' => 'medium',
+            'name' => '.input-text-medium',
             'file' => 'input-text',
             'items' => [
               'class' => 'input-text-medium'
@@ -149,7 +149,7 @@ $lists = [
         'name' => 'select',
         'items' => [
           [
-            'name' => 'small',
+            'name' => '.input-select-small',
             'file' => 'input-select',
             'items' => [
               'class' => 'input-select-small',
@@ -176,7 +176,7 @@ $lists = [
             ]
           ],
           [
-            'name' => 'medium',
+            'name' => '.input-select-medium',
             'file' => 'input-select',
             'items' => [
               'class' => 'input-select-medium',
@@ -204,14 +204,14 @@ $lists = [
         'name' => 'checkbox',
         'items' => [
           [
-            'name' => 'checked',
+            'name' => '.input-checkbox',
             'file' => 'input-checkbox',
             'items' => [
               'class' => 'input-checkbox'
             ]
           ],
           [
-            'name' => 'unchecked',
+            'name' => '.input-checkbox-checked',
             'file' => 'input-checkbox',
             'items' => [
               'class' => 'input-checkbox-checked'
@@ -223,14 +223,14 @@ $lists = [
         'name' => 'radio',
         'items' => [
           [
-            'name' => 'checked',
+            'name' => '.input-radio',
             'file' => 'input-radio',
             'items' => [
               'class' => 'input-radio'
             ]
           ],
           [
-            'name' => 'unchecked',
+            'name' => '.input-radio-checked',
             'file' => 'input-radio',
             'items' => [
               'class' => 'input-radio-checked'
@@ -244,10 +244,10 @@ $lists = [
     'name' => 'Icons',
     'items' => [
       [
-        'name' => 'call',
+        'name' => '.icon-call',
         'items' => [
           [
-            'name' => 'default',
+            'name' => '',
             'file' => 'icon',
             'items' => [
               'class' => 'icon-call'
@@ -256,10 +256,10 @@ $lists = [
         ]
       ],
       [
-        'name' => 'code',
+        'name' => '.icon-code',
         'items' => [
           [
-            'name' => 'default',
+            'name' => '',
             'file' => 'icon',
             'items' => [
               'class' => 'icon-code'
@@ -268,10 +268,10 @@ $lists = [
         ]
       ],
       [
-        'name' => 'delete',
+        'name' => '.icon-delete',
         'items' => [
           [
-            'name' => 'default',
+            'name' => '',
             'file' => 'icon',
             'items' => [
               'class' => 'icon-delete'
@@ -280,10 +280,10 @@ $lists = [
         ]
       ],
       [
-        'name' => 'down-arrow',
+        'name' => '.icon-down-arrow',
         'items' => [
           [
-            'name' => 'default',
+            'name' => '',
             'file' => 'icon',
             'items' => [
               'class' => 'icon-down-arrow'
@@ -292,10 +292,10 @@ $lists = [
         ]
       ],
       [
-        'name' => 'edit',
+        'name' => '.icon-edit',
         'items' => [
           [
-            'name' => 'default',
+            'name' => '',
             'file' => 'icon',
             'items' => [
               'class' => 'icon-edit'
@@ -304,10 +304,10 @@ $lists = [
         ]
       ],
       [
-        'name' => 'facebook',
+        'name' => '.icon-facebook',
         'items' => [
           [
-            'name' => 'default',
+            'name' => '',
             'file' => 'icon',
             'items' => [
               'class' => 'icon-facebook'
@@ -316,10 +316,10 @@ $lists = [
         ]
       ],
       [
-        'name' => 'flashlight',
+        'name' => '.icon-flashlight',
         'items' => [
           [
-            'name' => 'default',
+            'name' => '',
             'file' => 'icon',
             'items' => [
               'class' => 'icon-flashlight'
@@ -328,10 +328,10 @@ $lists = [
         ]
       ],
       [
-        'name' => 'google-plus',
+        'name' => '.icon-google-plus',
         'items' => [
           [
-            'name' => 'default',
+            'name' => '',
             'file' => 'icon',
             'items' => [
               'class' => 'icon-google-plus'
@@ -340,10 +340,10 @@ $lists = [
         ]
       ],
       [
-        'name' => 'heart',
+        'name' => '.icon-heart',
         'items' => [
           [
-            'name' => 'default',
+            'name' => '',
             'file' => 'icon',
             'items' => [
               'class' => 'icon-heart'
@@ -352,10 +352,10 @@ $lists = [
         ]
       ],
       [
-        'name' => 'instagram',
+        'name' => '.icon-instagram',
         'items' => [
           [
-            'name' => 'default',
+            'name' => '',
             'file' => 'icon',
             'items' => [
               'class' => 'icon-instagram'
@@ -364,10 +364,10 @@ $lists = [
         ]
       ],
       [
-        'name' => 'location',
+        'name' => '.icon-location',
         'items' => [
           [
-            'name' => 'default',
+            'name' => '',
             'file' => 'icon',
             'items' => [
               'class' => 'icon-location'
@@ -376,10 +376,10 @@ $lists = [
         ]
       ],
       [
-        'name' => 'mail',
+        'name' => '.icon-mail',
         'items' => [
           [
-            'name' => 'default',
+            'name' => '',
             'file' => 'icon',
             'items' => [
               'class' => 'icon-mail'
@@ -388,10 +388,10 @@ $lists = [
         ]
       ],
       [
-        'name' => 'media',
+        'name' => '.icon-media',
         'items' => [
           [
-            'name' => 'default',
+            'name' => '',
             'file' => 'icon',
             'items' => [
               'class' => 'icon-media'
@@ -400,10 +400,10 @@ $lists = [
         ]
       ],
       [
-        'name' => 'menu',
+        'name' => '.icon-menu',
         'items' => [
           [
-            'name' => 'default',
+            'name' => '',
             'file' => 'icon',
             'items' => [
               'class' => 'icon-menu'
@@ -412,10 +412,10 @@ $lists = [
         ]
       ],
       [
-        'name' => 'mobile',
+        'name' => '.icon-mobile',
         'items' => [
           [
-            'name' => 'default',
+            'name' => '',
             'file' => 'icon',
             'items' => [
               'class' => 'icon-mobile'
@@ -424,10 +424,10 @@ $lists = [
         ]
       ],
       [
-        'name' => 'people',
+        'name' => '.icon-people',
         'items' => [
           [
-            'name' => 'default',
+            'name' => '',
             'file' => 'icon',
             'items' => [
               'class' => 'icon-people'
@@ -436,10 +436,10 @@ $lists = [
         ]
       ],
       [
-        'name' => 'photo',
+        'name' => '.icon-photo',
         'items' => [
           [
-            'name' => 'default',
+            'name' => '',
             'file' => 'icon',
             'items' => [
               'class' => 'icon-photo'
@@ -448,10 +448,10 @@ $lists = [
         ]
       ],
       [
-        'name' => 'pinterest',
+        'name' => '.icon-pinterest',
         'items' => [
           [
-            'name' => 'default',
+            'name' => '',
             'file' => 'icon',
             'items' => [
               'class' => 'icon-pinterest'
@@ -460,10 +460,10 @@ $lists = [
         ]
       ],
       [
-        'name' => 'reload',
+        'name' => '.icon-reload',
         'items' => [
           [
-            'name' => 'default',
+            'name' => '',
             'file' => 'icon',
             'items' => [
               'class' => 'icon-reload'
@@ -472,10 +472,10 @@ $lists = [
         ]
       ],
       [
-        'name' => 'rss',
+        'name' => '.icon-rss',
         'items' => [
           [
-            'name' => 'default',
+            'name' => '',
             'file' => 'icon',
             'items' => [
               'class' => 'icon-rss'
@@ -484,10 +484,10 @@ $lists = [
         ]
       ],
       [
-        'name' => 'search',
+        'name' => '.icon-search',
         'items' => [
           [
-            'name' => 'default',
+            'name' => '',
             'file' => 'icon',
             'items' => [
               'class' => 'icon-search'
@@ -496,10 +496,10 @@ $lists = [
         ]
       ],
       [
-        'name' => 'share',
+        'name' => '.icon-share',
         'items' => [
           [
-            'name' => 'default',
+            'name' => '',
             'file' => 'icon',
             'items' => [
               'class' => 'icon-share'
@@ -508,10 +508,10 @@ $lists = [
         ]
       ],
       [
-        'name' => 'twitter',
+        'name' => '.icon-twitter',
         'items' => [
           [
-            'name' => 'default',
+            'name' => '',
             'file' => 'icon',
             'items' => [
               'class' => 'icon-twitter'
@@ -520,10 +520,10 @@ $lists = [
         ]
       ],
       [
-        'name' => 'video',
+        'name' => '.icon-video',
         'items' => [
           [
-            'name' => 'default',
+            'name' => '',
             'file' => 'icon',
             'items' => [
               'class' => 'icon-video'
@@ -532,10 +532,10 @@ $lists = [
         ]
       ],
       [
-        'name' => 'view',
+        'name' => '.icon-view',
         'items' => [
           [
-            'name' => 'default',
+            'name' => '',
             'file' => 'icon',
             'items' => [
               'class' => 'icon-view'
@@ -544,22 +544,36 @@ $lists = [
         ]
       ],
       [
-        'name' => 'x',
+        'name' => '.icon-x',
         'items' => [
           [
-            'name' => 'default',
+            'name' => '',
             'file' => 'icon',
             'items' => [
               'class' => 'icon-x'
             ]
           ],
+          [
+            'name' => '.icon-message-circle',
+            'file' => 'icon',
+            'items' => [
+              'class' => 'icon-x-circle'
+            ]
+          ],
+          [
+            'name' => '.icon-message-donut',
+            'file' => 'icon',
+            'items' => [
+              'class' => 'icon-x-donut'
+            ]
+          ],
         ]
       ],
       [
-        'name' => 'yield',
+        'name' => '.icon-yield',
         'items' => [
           [
-            'name' => 'default',
+            'name' => '',
             'file' => 'icon',
             'items' => [
               'class' => 'icon-yield'
@@ -568,10 +582,10 @@ $lists = [
         ]
       ],
       [
-        'name' => 'graph',
+        'name' => '.icon-graph',
         'items' => [
           [
-            'name' => 'default',
+            'name' => '',
             'file' => 'icon',
             'items' => [
               'class' => 'icon-graph'
@@ -580,10 +594,10 @@ $lists = [
         ]
       ],
       [
-        'name' => 'copy',
+        'name' => '.icon-copy',
         'items' => [
           [
-            'name' => 'default',
+            'name' => '',
             'file' => 'icon',
             'items' => [
               'class' => 'icon-copy'
@@ -592,10 +606,10 @@ $lists = [
         ]
       ],
       [
-        'name' => 'signpost',
+        'name' => '.icon-signpost',
         'items' => [
           [
-            'name' => 'default',
+            'name' => '',
             'file' => 'icon',
             'items' => [
               'class' => 'icon-signpost'
@@ -604,10 +618,10 @@ $lists = [
         ]
       ],
       [
-        'name' => 'book',
+        'name' => '.icon-book',
         'items' => [
           [
-            'name' => 'default',
+            'name' => '',
             'file' => 'icon',
             'items' => [
               'class' => 'icon-book'
@@ -616,10 +630,10 @@ $lists = [
         ]
       ],
       [
-        'name' => 'utensils',
+        'name' => '.icon-utensils',
         'items' => [
           [
-            'name' => 'default',
+            'name' => '',
             'file' => 'icon',
             'items' => [
               'class' => 'icon-utensils'
@@ -628,10 +642,10 @@ $lists = [
         ]
       ],
       [
-        'name' => 'grad',
+        'name' => '.icon-grad',
         'items' => [
           [
-            'name' => 'default',
+            'name' => '',
             'file' => 'icon',
             'items' => [
               'class' => 'icon-grad'
@@ -640,10 +654,10 @@ $lists = [
         ]
       ],
       [
-        'name' => 'medical',
+        'name' => '.icon-medical',
         'items' => [
           [
-            'name' => 'default',
+            'name' => '',
             'file' => 'icon',
             'items' => [
               'class' => 'icon-medical'
@@ -652,10 +666,10 @@ $lists = [
         ]
       ],
       [
-        'name' => 'picture',
+        'name' => '.icon-picture',
         'items' => [
           [
-            'name' => 'default',
+            'name' => '',
             'file' => 'icon',
             'items' => [
               'class' => 'icon-picture'
@@ -664,10 +678,10 @@ $lists = [
         ]
       ],
       [
-        'name' => 'bed',
+        'name' => '.icon-bed',
         'items' => [
           [
-            'name' => 'default',
+            'name' => '',
             'file' => 'icon',
             'items' => [
               'class' => 'icon-bed'
@@ -676,10 +690,10 @@ $lists = [
         ]
       ],
       [
-        'name' => 'golpher',
+        'name' => '.icon-golpher',
         'items' => [
           [
-            'name' => 'default',
+            'name' => '',
             'file' => 'icon',
             'items' => [
               'class' => 'icon-golpher'
@@ -688,34 +702,24 @@ $lists = [
         ]
       ],
       [
-        'name' => 'message',
+        'name' => '.icon-message',
         'items' => [
           [
-            'name' => 'default',
+            'name' => '',
             'file' => 'icon',
             'items' => [
               'class' => 'icon-message'
             ]
           ],
-        ]
-      ],
-      [
-        'name' => 'message',
-        'items' => [
           [
-            'name' => 'donut',
+            'name' => '.icon-message-donut',
             'file' => 'icon',
             'items' => [
               'class' => 'icon-message-donut'
             ]
           ],
-        ]
-      ],
-      [
-        'name' => 'message',
-        'items' => [
           [
-            'name' => 'circle',
+            'name' => '.icon-message-circle',
             'file' => 'icon',
             'items' => [
               'class' => 'icon-message-circle'
@@ -724,10 +728,10 @@ $lists = [
         ]
       ],
       [
-        'name' => 'apple',
+        'name' => '.icon-apple',
         'items' => [
           [
-            'name' => 'default',
+            'name' => '',
             'file' => 'icon',
             'items' => [
               'class' => 'icon-apple'
@@ -736,10 +740,10 @@ $lists = [
         ]
       ],
       [
-        'name' => 'android',
+        'name' => '.icon-android',
         'items' => [
           [
-            'name' => 'default',
+            'name' => '',
             'file' => 'icon',
             'items' => [
               'class' => 'icon-android'
