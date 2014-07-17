@@ -7,13 +7,13 @@
 
 =def($name, $class: null, $parent: null)
   @if _get-module($name) == null
-    @if $class == null
-      $class: _build-class($name, $parent)
-
     $_modules: map-merge($_modules, (#{$name}: (class: $class, parent: $parent))) !global
 
     %#{$name}
-      @if $parent != null
+      @if type-of($parent) == "list"
+        @each $p in $parent
+          @extend %#{$p}
+      @else if $parent != null
         @extend %#{$parent}
       @content
   @else
@@ -71,6 +71,7 @@
   @else
     +error("Cannot link to non-existant module, `#{$name}`.")
 
+// !!! DEPRECATED !!!
 // private function _build-class
 //    used by def to build module class
 //    @param  $name     name of module
