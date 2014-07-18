@@ -81,7 +81,7 @@ $_fonts-path: "bin/fonts/";
 //    map of shortcuts to combinations of font weights
 //    @see $fonts
 
-$_font-weights: (regular: (thin: 400), regular-bold: (thin: 400, thick: 700), light-bold: (thin: 100, thick: 700));
+$_font-weights: (light: 100, regular: 400, bold: 700);
 
 // private $_font-heights
 //    list of font heights
@@ -93,14 +93,14 @@ $_font-heights: (175%, 150%, 166.7%);
 //    mapping font-size names to full styles
 
 $_fonts: (
-  12: (font-family: $font-family, font-size: 1.2rem, line-height: nth($_font-heights, 1), weights: map-get($_font-weights, regular)),
-  14: (font-family: $font-family, font-size: 1.4rem, line-height: nth($_font-heights, 1), weights: map-get($_font-weights, regular)),
-  16: (font-family: $font-family, font-size: 1.6rem, line-height: nth($_font-heights, 2), weights: map-get($_font-weights, regular-bold)),
-  18: (font-family: $font-family, font-size: 1.8rem, line-height: nth($_font-heights, 2), weights: map-get($_font-weights, regular)),
-  20: (font-family: $font-family, font-size: 2.0rem, line-height: nth($_font-heights, 2), weights: map-get($_font-weights, regular-bold)),
-  26: (font-family: $font-family, font-size: 2.6rem, line-height: nth($_font-heights, 3), weights: map-get($_font-weights, light-bold)),
-  32: (font-family: $font-family, font-size: 3.2rem, line-height: nth($_font-heights, 3), weights: map-get($_font-weights, light-bold)),
-  40: (font-family: $font-family, font-size: 4.0rem, line-height: nth($_font-heights, 3), weights: map-get($_font-weights, light-bold)),
-  50: (font-family: $font-family, font-size: 5.0rem, line-height: nth($_font-heights, 3), weights: map-get($_font-weights, light-bold)),0
-  70: (font-family: $font-family, font-size: 7.0rem, line-height: nth($_font-heights, 3), weights: map-get($_font-weights, light-bold)),
+  12: (font-family: $font-family, font-size: 1.2rem, line-height: nth($_font-heights, 1)),
+  14: (font-family: $font-family, font-size: 1.4rem, line-height: nth($_font-heights, 1)),
+  16: (font-family: $font-family, font-size: 1.6rem, line-height: nth($_font-heights, 2)),
+  18: (font-family: $font-family, font-size: 1.8rem, line-height: nth($_font-heights, 2)),
+  20: (font-family: $font-family, font-size: 2.0rem, line-height: nth($_font-heights, 2)),
+  26: (font-family: $font-family, font-size: 2.6rem, line-height: nth($_font-heights, 3)),
+  32: (font-family: $font-family, font-size: 3.2rem, line-height: nth($_font-heights, 3)),
+  40: (font-family: $font-family, font-size: 4.0rem, line-height: nth($_font-heights, 3)),
+  50: (font-family: $font-family, font-size: 5.0rem, line-height: nth($_font-heights, 3)),
+  70: (font-family: $font-family, font-size: 7.0rem, line-height: nth($_font-heights, 3)),
 );

@@ -114,13 +114,13 @@
 //    @param  $weightID     thick or thin, from $_font-weights
 //    @param  $overrides    values to override default font styles
 
-=font($fontID, $weightID, $overrides:"")
-  $font-family: ""
-  $font-size: ""
-  $line-height: ""
-  $font-weight: ""
+=font($id, $styles: null)
+  $font-family: null
+  $font-size: null
+  $line-height: null
+  $font-weight: null
 
-  @each $options in (map-get($_fonts, $fontID), $overrides)
+  @each $options in (map-get($_fonts, $id), $styles)
     @each $name, $value in $options
       @if $name == font-family
         $font-family: $value
@@ -130,11 +130,6 @@
         $line-height: $value
       @else if $name == font-weight
         $font-weight: $value
-      @else if $name == weights
-        @if type-of($value) == "map"
-          $font-weight: map-get($value, $weightID)
-        @else
-          $font-weight: $value 
 
   font-family: $font-family
   font-weight: unquote($font-weight)
