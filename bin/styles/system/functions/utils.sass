@@ -156,6 +156,13 @@
     font-weight: normal
     font-style: normal
 
+// public mixin font-weight
+//    @param  $name           font-family name for font
+//    @param  $font-weights   (optional) map of weights, defaults to $_font-weights
+
+=font-weight($name, $font-weights: $_font-weights)
+  font-weight: map-get($_font-weights, $name)
+
 // public mixin build-sizes
 //    builds size placeholders
 //    @see $_sizes

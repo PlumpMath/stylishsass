@@ -1,0 +1,14 @@
+
++def("FilterIcon", $class: "icon-filter", $parent: "Icon")
+  &::before
+    content: "f"
+
++new("FilterIcon")
+
+
++new("FilterIcon", "circle")
+  +extend("CircleIcon")
+
++new("FilterIcon", "donut")
+  +extend("DonutIcon")
+
