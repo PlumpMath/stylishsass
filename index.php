@@ -241,6 +241,36 @@ $lists = [
     ]
   ],
   [
+    'name' => 'Tabs',
+    'items' => [
+      [
+        'name' => '.tab-list',
+        'items' => [
+          [
+            'name' => '.tab-active & .tab',
+            'file' => 'tabs',
+            'items' => [
+              'items' => [
+                [
+                  'name' => 'Tab 1',
+                  'class' => 'tab-active'
+                ],
+                [
+                  'name' => 'Tab 2',
+                  'class' => 'tab'
+                ],
+                [
+                  'name' => 'Tab 3',
+                  'class' => 'tab'
+                ]
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  ],
+  [
     'name' => 'Icons',
     'items' => [
       [

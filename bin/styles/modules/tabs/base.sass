@@ -1,0 +1,45 @@
++def("Tab", $class: "tab", $parent: "Pointer")
+  +size("medium")
+  text-align: center
+  border-color: color(primary)
+  display: table-cell
+
+  border-bottom:
+    style: solid
+    width: 0.1rem
+
+  border-top:
+    style: solid
+    width: 0.1rem
+
+  &:first-child
+    +extend("Bordered")
+    border-radius: $border-radius 0 0 $border-radius
+
+  &:last-child
+    +extend("Bordered")
+    border-radius: 0 $border-radius $border-radius 0
+
++new("Tab")
+  background-color: white
+  color: color(primary)
+
++new("Tab", "active")
+  position: relative
+  background-color: color(primary)
+  color: white
+
+  &::after
+    content: ""
+
+    position: absolute
+    bottom: -2rem
+    left: 50%
+    +prefix(transform, translateX(-50%))
+
+    width: 0
+    height: 0
+
+    border-left: 2rem solid clear()
+    border-right: 2rem solid clear()
+    border-top: 2rem solid color(primary)
