@@ -168,7 +168,7 @@
     $name: nth($sizes, $index)
 
     %size-#{$name}
-      @include font(nth($fonts, $index), thin, (font-weight: "")) // override font-weight to unset
+      @include font(nth($fonts, $index)) // override font-weight to unset
 
       padding-top: nth($pads, $index)
       padding-bottom: nth($pads, $index)
