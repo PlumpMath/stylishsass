@@ -781,6 +781,66 @@ $lists = [
           ],
         ]
       ],
+      [
+        'name' => '.icon-check',
+        'items' => [
+          [
+            'name' => '',
+            'file' => 'icon',
+            'items' => [
+              'class' => 'icon-check'
+            ]
+          ],
+        ]
+      ],
+      [
+        'name' => '.icon-calendar',
+        'items' => [
+          [
+            'name' => '',
+            'file' => 'icon',
+            'items' => [
+              'class' => 'icon-calendar'
+            ]
+          ],
+        ]
+      ],
+      [
+        'name' => '.icon-compose',
+        'items' => [
+          [
+            'name' => '',
+            'file' => 'icon',
+            'items' => [
+              'class' => 'icon-compose'
+            ]
+          ],
+        ]
+      ],
+      [
+        'name' => '.icon-minus',
+        'items' => [
+          [
+            'name' => '',
+            'file' => 'icon',
+            'items' => [
+              'class' => 'icon-minus'
+            ]
+          ],
+        ]
+      ],
+      [
+        'name' => '.icon-plus',
+        'items' => [
+          [
+            'name' => '',
+            'file' => 'icon',
+            'items' => [
+              'class' => 'icon-plus'
+            ]
+          ],
+        ]
+      ],
     ]
   ],
 ];
