@@ -1,0 +1,14 @@
+
++def("PencilIcon", $class: "icon-pencil", $parent: "Icon")
+  &::before
+    content: "e"
+
++new("PencilIcon")
+
+
++new("PencilIcon", "circle")
+  +extend("CircleIcon")
+
++new("PencilIcon", "donut")
+  +extend("DonutIcon")
+
