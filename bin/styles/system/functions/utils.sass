@@ -91,7 +91,7 @@
 //    @param  $prefixes   (optional) vendor prefixes, defaults to $_prefixes
 
 @function prefix($value, $prefixes: $_prefixes)
-  $ret: ()
+  $ret: ($value)
 
   @each $prefix in $prefixes
     $ret: append($ret, "-#{$prefix}-#{$value}", "comma")
