@@ -62,7 +62,7 @@
 
 =_multiple-properties($properties, $value)
   @each $property in $properties
-    #{$property}: $value
+    #{$property}: unquote($value)
 
 // private mixin _multiple-values
 //    assign a property to multiple values
@@ -83,7 +83,7 @@
     +error("Properties (#{$properties}) and values (#{$values}) are not the same length.")
 
   @for $index from 1 through length($properties)
-    #{nth($properties, $index)}: nth($value, $index)
+    #{nth($properties, $index)}: nth($values, $index)
 
 // public function prefix
 //    returns a list of prefixed values
