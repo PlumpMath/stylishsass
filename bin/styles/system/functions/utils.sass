@@ -174,7 +174,7 @@
     $name: nth($sizes, $index)
 
     %size-#{$name}
-      @include font(nth($fonts, $index)) // override font-weight to unset
+      @include font(nth($fonts, $index), (line-height: 90%)) // override line-height to 1
 
       padding-top: nth($pads, $index)
       padding-bottom: nth($pads, $index)
